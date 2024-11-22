@@ -2,7 +2,7 @@
 
 [![wakatime](https://wakatime.com/badge/user/dafb4694-ac64-45f8-a0ef-3d87c211ac2e.svg)](https://wakatime.com/@dafb4694-ac64-45f8-a0ef-3d87c211ac2e)
 
-I am currently employed at a company specializing in corporate tax services, where I focus on backend programming for web services, primarily using Golang. I have also accumulated extensive experience with C++, PHP, and JavaScript/TypeScript in my previous roles.
+I am currently employed at a company specializing in corporate tax services, where I focus on backend programming for web services, primarily using Golang. I have also accumulated extensive experience with C++, PHP, and JavaScript/TypeScript in my previous roles since 2019.
 
 My extensive professional experience and deep personal interest in computer systems enable me to take on diverse roles. I excel in optimizing system performance by analyzing log data and fine-tuning database queries, achieving significant improvements with minimal cost. Additionally, I am proficient in both frontend and backend development, as well as Linux operations. I am capable of independently designing and implementing web-based frontend projects and developing robust, production-ready backend APIs.
 
