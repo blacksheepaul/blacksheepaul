@@ -4,12 +4,15 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from datetime import datetime, timedelta
 import os
+import base64
 
 class WakaTimeProcessor:
     def __init__(self, api_key):
         self.api_key = api_key
         self.base_url = "https://wakatime.com/api/v1"
-        self.headers = {"Authorization": f"Bearer {api_key}"}
+        # Encode API key using base64 for HTTP Basic Auth
+        encoded_key = base64.b64encode(api_key.encode()).decode()
+        self.headers = {"Authorization": f"Basic {encoded_key}"}
     
     def get_stats(self, range_type="last_7_days"):
         """获取统计数据"""
