@@ -81,8 +81,8 @@ class WakaTimeProcessor:
         
         colors = ['#DD5500', '#00DD55', '#5500DD', '#DDDD00', '#DD0055']
         
-        # 增加高度并调整间距
-        fig, ax = plt.subplots(figsize=(12, 4))
+        # 缩短宽度12%：从12到10.56
+        fig, ax = plt.subplots(figsize=(7.62, 2.56))
         fig.patch.set_facecolor('white')
         
         # 反转顺序，使时长最长的在顶部
