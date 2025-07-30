@@ -66,27 +66,47 @@ class WakaTimeProcessor:
         
         colors = ['#DD5500', '#00DD55', '#5500DD', '#DDDD00', '#DD0055']
         
-        # 减少高度以缩短柱形宽度
-        fig, ax = plt.subplots(figsize=(10, 3))
+        # 增加高度并调整间距
+        fig, ax = plt.subplots(figsize=(12, 4))
         fig.patch.set_facecolor('white')
         
         # 反转顺序，使时长最长的在顶部
         names = [lang['name'] for lang in reversed(languages)]
         hours = [lang['total_seconds'] / 3600 for lang in reversed(languages)]
         
-        bars = ax.barh(names, hours, color=colors[:len(names)])
+        # 增加柱形间的间距
+        y_positions = range(len(names))
+        
+        # 柱状图从中间位置开始，占据右半部分
+        bars = ax.barh(y_positions, hours, left=0, color=colors[:len(names)], height=0.6)
         
         ax.get_xaxis().set_visible(False)
         ax.set_title('Weekly Coding Activity', fontsize=16, fontweight='bold', pad=20)
+        
+        # 完全隐藏Y轴刻度和标签
+        ax.set_yticks([])
+        ax.set_yticklabels([])
+        ax.tick_params(left=False)
         
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.spines['left'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         
-        for i, (bar, hour) in enumerate(zip(bars, hours)):
-            ax.text(hour + 0.1, i, f'{hour:.1f}h', 
-                   va='center', fontweight='bold')
+        # 计算最大小时数，用于设置比例
+        max_hour = max(hours)
+        
+        # 自定义文本显示：name 时间 柱形
+        for i, (name, hour) in enumerate(zip(names, hours)):
+            # 语言名称左对齐显示在负X轴区域
+            ax.text(-max_hour * 0.95, i, name, 
+                   va='center', ha='left', fontweight='bold')
+            # 时间显示在语言名称右侧
+            ax.text(-max_hour * 0.3, i, f'{hour:.1f}h', 
+                   va='center', ha='left', fontweight='bold')
+        
+        # 设置X轴范围：左半部分给文本，右半部分给柱状图
+        ax.set_xlim(-max_hour, max_hour * 1.1)
         
         plt.tight_layout()
         plt.savefig('wakatime_stats.svg', format='svg', bbox_inches='tight')
