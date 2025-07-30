@@ -1,0 +1,41 @@
+name: Update Steam Stats
+
+on:
+    schedule:
+        - cron: "0 2 * * *" # 每天凌晨2点更新（避免与WakaTime冲突）
+    workflow_dispatch:
+
+jobs:
+    update-stats:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.9"
+
+            - name: Install dependencies
+              run: |
+                  pip install requests matplotlib
+
+            - name: Generate Steam Chart
+              env:
+                  STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+                  STEAM_ID: ${{ secrets.STEAM_ID }}
+              run: python scripts/generate_steam_chart.py
+
+            - name: Commit changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add steam_stats.svg steam_stats_dark.svg
+                  git diff --staged --quiet || git commit -m "Update Steam stats"
+                  git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
