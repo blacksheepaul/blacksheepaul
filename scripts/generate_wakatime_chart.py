@@ -5,17 +5,41 @@ import matplotlib.patches as patches
 from datetime import datetime, timedelta
 import os
 import base64
+import argparse
+
+# Set matplotlib backend for SVG output
+plt.switch_backend('svg')
 
 class WakaTimeProcessor:
-    def __init__(self, api_key):
-        self.api_key = api_key
-        self.base_url = "https://wakatime.com/api/v1"
-        # Encode API key using base64 for HTTP Basic Auth
-        encoded_key = base64.b64encode(api_key.encode()).decode()
-        self.headers = {"Authorization": f"Basic {encoded_key}"}
+    def __init__(self, api_key=None, test_mode=False):
+        self.test_mode = test_mode
+        if not test_mode:
+            self.api_key = api_key
+            self.base_url = "https://wakatime.com/api/v1"
+            # Encode API key using base64 for HTTP Basic Auth
+            encoded_key = base64.b64encode(api_key.encode()).decode()
+            self.headers = {"Authorization": f"Basic {encoded_key}"}
+    
+    def get_mock_data(self):
+        """返回模拟测试数据"""
+        return {
+            'data': {
+                'languages': [
+                    {'name': 'Python', 'total_seconds': 25200, 'percent': 45.2},
+                    {'name': 'JavaScript', 'total_seconds': 14400, 'percent': 25.8},
+                    {'name': 'TypeScript', 'total_seconds': 7200, 'percent': 12.9},
+                    {'name': 'HTML', 'total_seconds': 5400, 'percent': 9.7},
+                    {'name': 'CSS', 'total_seconds': 3600, 'percent': 6.4},
+                    {'name': 'JSON', 'total_seconds': 1200, 'percent': 2.1}
+                ]
+            }
+        }
     
     def get_stats(self, range_type="last_7_days"):
         """获取统计数据"""
+        if self.test_mode:
+            return self.get_mock_data()
+        
         url = f"{self.base_url}/users/current/stats/{range_type}"
         response = requests.get(url, headers=self.headers)
         return response.json()
@@ -59,10 +83,26 @@ class WakaTimeProcessor:
                    va='center', fontweight='bold')
         
         plt.tight_layout()
-        plt.savefig('wakatime_stats.png', dpi=300, bbox_inches='tight')
+        plt.savefig('wakatime_stats.svg', format='svg', bbox_inches='tight')
         plt.close()
+        print(f"Chart saved as {filename}")
+
+def main():
+    parser = argparse.ArgumentParser(description='Generate WakaTime coding activity chart')
+    parser.add_argument('--test', action='store_true', help='Run in test mode with mock data')
+    args = parser.parse_args()
+    
+    if args.test:
+        print("Running in test mode with mock data...")
+        processor = WakaTimeProcessor(test_mode=True)
+    else:
+        api_key = os.environ.get('WAKATIME_API_KEY')
+        if not api_key:
+            print("Error: WAKATIME_API_KEY environment variable not set")
+            return
+        processor = WakaTimeProcessor(api_key)
+    
+    processor.generate_clean_chart()
 
 if __name__ == "__main__":
-    api_key = os.environ.get('WAKATIME_API_KEY')
-    processor = WakaTimeProcessor(api_key)
-    processor.generate_clean_chart()
+    main()
