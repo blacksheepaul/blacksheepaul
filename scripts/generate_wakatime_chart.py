@@ -113,12 +113,12 @@ class WakaTimeProcessor:
         
         # 自定义文本显示：name 时间 柱形
         for i, (lang, hour) in enumerate(zip(reversed(languages), hours)):
-            # 语言名称左对齐显示在负X轴区域
+            # 语言名称左对齐显示在负X轴区域，整体左移
             ax.text(-max_hour * 0.95, i, lang['name'], 
                    va='center', ha='left', fontweight='bold')
-            # 时间显示在语言名称右侧，使用新的格式
+            # 时间显示在语言名称右侧，使用新的格式，也左移
             time_text = self.format_time(lang['total_seconds'])
-            ax.text(-max_hour * 0.3, i, time_text, 
+            ax.text(-max_hour * 0.5, i, time_text, 
                    va='center', ha='left', fontweight='bold')
         
         # 设置X轴范围：左半部分给文本，右半部分给柱状图
@@ -169,12 +169,12 @@ class WakaTimeProcessor:
         
         # 自定义文本显示：name 时间 柱形
         for i, (lang, hour) in enumerate(zip(reversed(languages), hours)):
-            # 语言名称左对齐显示在负X轴区域
+            # 语言名称左对齐显示在负X轴区域，整体左移
             ax.text(-max_hour * 0.95, i, lang['name'], 
                    va='center', ha='left', fontweight='bold', color='white')
-            # 时间显示在语言名称右侧，使用新的格式
+            # 时间显示在语言名称右侧，使用新的格式，也左移
             time_text = self.format_time(lang['total_seconds'])
-            ax.text(-max_hour * 0.3, i, time_text, 
+            ax.text(-max_hour * 0.5, i, time_text, 
                    va='center', ha='left', fontweight='bold', color='#cccccc')
         
         # 设置X轴范围：左半部分给文本，右半部分给柱状图

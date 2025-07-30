@@ -174,7 +174,7 @@ class SteamProcessor:
             ax.text(-max_hour * 0.95, i, game['name'], 
                    va='center', ha='left', fontweight='bold')
             time_text = self.format_time(game[time_key])
-            ax.text(-max_hour * 0.3, i, time_text, 
+            ax.text(-max_hour * 0.5, i, time_text, 
                    va='center', ha='left', fontweight='bold')
         
         ax.set_xlim(-max_hour, max_hour * 1.1)
@@ -232,7 +232,7 @@ class SteamProcessor:
             ax.text(-max_hour * 0.95, i, game['name'], 
                    va='center', ha='left', fontweight='bold', color='white')
             time_text = self.format_time(game[time_key])
-            ax.text(-max_hour * 0.3, i, time_text, 
+            ax.text(-max_hour * 0.5, i, time_text, 
                    va='center', ha='left', fontweight='bold', color='#cccccc')
         
         ax.set_xlim(-max_hour, max_hour * 1.1)
