@@ -140,19 +140,12 @@ class SteamProcessor:
             print("No gaming activity to display")
             return
         
-        # 游戏活动颜色（蓝绿色系）
-        colors = ['#0066CC', '#3388DD', '#55AAEE', '#77BBFF', '#99CCFF']
-        
         fig, ax = plt.subplots(figsize=(7.62, 2.56))
         fig.patch.set_facecolor('white')
         
         # 反转顺序，使时长最长的在顶部
         games_reversed = list(reversed(games))
-        hours = [game[time_key] / 3600 for game in games_reversed]
         y_positions = range(len(games_reversed))
-        
-        # 绘制柱状图
-        bars = ax.barh(y_positions, hours, left=0, color=colors[:len(games_reversed)], height=0.6)
         
         ax.get_xaxis().set_visible(False)
         ax.set_title(chart_title, fontsize=16, fontweight='bold', pad=20)
@@ -167,17 +160,17 @@ class SteamProcessor:
         ax.spines['left'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         
-        max_hour = max(hours) if hours else 1
-        
-        # 显示游戏名称和时间
+        # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
-            ax.text(-max_hour * 0.95, i, game['name'], 
+            # 游戏名称左对齐
+            ax.text(0.05, i, game['name'], 
                    va='center', ha='left', fontweight='bold')
+            # 游戏时间右对齐
             time_text = self.format_time(game[time_key])
-            ax.text(-max_hour * 0.5, i, time_text, 
-                   va='center', ha='left', fontweight='bold')
+            ax.text(0.95, i, time_text, 
+                   va='center', ha='right', fontweight='bold')
         
-        ax.set_xlim(-max_hour, max_hour * 1.1)
+        ax.set_xlim(0, 1)
         
         plt.tight_layout()
         plt.savefig('steam_stats.svg', format='svg', bbox_inches='tight')
@@ -201,17 +194,11 @@ class SteamProcessor:
             print("No gaming activity to display")
             return
         
-        # 黑暗主题颜色
-        colors = ['#4ECDC4', '#6EDDD4', '#8EEEE4', '#AEFFF4', '#CEFFFF']
-        
         fig, ax = plt.subplots(figsize=(7.62, 2.56))
         fig.patch.set_facecolor('#1e1e1e')
         
         games_reversed = list(reversed(games))
-        hours = [game[time_key] / 3600 for game in games_reversed]
         y_positions = range(len(games_reversed))
-        
-        bars = ax.barh(y_positions, hours, left=0, color=colors[:len(games_reversed)], height=0.6)
         
         ax.get_xaxis().set_visible(False)
         ax.set_title(chart_title, fontsize=16, fontweight='bold', pad=20, color='white')
@@ -226,16 +213,17 @@ class SteamProcessor:
         ax.spines['left'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         
-        max_hour = max(hours) if hours else 1
-        
+        # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
-            ax.text(-max_hour * 0.95, i, game['name'], 
+            # 游戏名称左对齐
+            ax.text(0.05, i, game['name'], 
                    va='center', ha='left', fontweight='bold', color='white')
+            # 游戏时间右对齐
             time_text = self.format_time(game[time_key])
-            ax.text(-max_hour * 0.5, i, time_text, 
-                   va='center', ha='left', fontweight='bold', color='#cccccc')
+            ax.text(0.95, i, time_text, 
+                   va='center', ha='right', fontweight='bold', color='#cccccc')
         
-        ax.set_xlim(-max_hour, max_hour * 1.1)
+        ax.set_xlim(0, 1)
         
         plt.tight_layout()
         plt.savefig('steam_stats_dark.svg', format='svg', bbox_inches='tight')
