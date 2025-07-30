@@ -55,6 +55,9 @@ class WakaTimeProcessor:
             if lang['total_seconds'] > 1800
         ]
         
+        # 按使用时间降序排列，时间最长的在前
+        filtered_languages.sort(key=lambda x: x['total_seconds'], reverse=True)
+        
         return filtered_languages[:5]  # 只要前5种语言
     
     def generate_clean_chart(self):
@@ -63,20 +66,23 @@ class WakaTimeProcessor:
         
         colors = ['#DD5500', '#00DD55', '#5500DD', '#DDDD00', '#DD0055']
         
-        fig, ax = plt.subplots(figsize=(10, 6))
+        # 减少高度以缩短柱形宽度
+        fig, ax = plt.subplots(figsize=(10, 3))
         fig.patch.set_facecolor('white')
         
-        names = [lang['name'] for lang in languages]
-        hours = [lang['total_seconds'] / 3600 for lang in languages]
+        # 反转顺序，使时长最长的在顶部
+        names = [lang['name'] for lang in reversed(languages)]
+        hours = [lang['total_seconds'] / 3600 for lang in reversed(languages)]
         
         bars = ax.barh(names, hours, color=colors[:len(names)])
         
-        ax.set_xlabel('Hours', fontsize=12, fontweight='bold')
+        ax.get_xaxis().set_visible(False)
         ax.set_title('Weekly Coding Activity', fontsize=16, fontweight='bold', pad=20)
         
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.spines['left'].set_visible(False)
+        ax.spines['bottom'].set_visible(False)
         
         for i, (bar, hour) in enumerate(zip(bars, hours)):
             ax.text(hour + 0.1, i, f'{hour:.1f}h', 
@@ -85,7 +91,7 @@ class WakaTimeProcessor:
         plt.tight_layout()
         plt.savefig('wakatime_stats.svg', format='svg', bbox_inches='tight')
         plt.close()
-        print(f"Chart saved as {filename}")
+        print("Chart saved as wakatime_stats.svg")
 
 def main():
     parser = argparse.ArgumentParser(description='Generate WakaTime coding activity chart')
