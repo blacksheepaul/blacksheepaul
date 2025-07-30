@@ -60,6 +60,21 @@ class WakaTimeProcessor:
         
         return filtered_languages[:5]  # 只要前5种语言
     
+    def format_time(self, total_seconds):
+        """格式化时间显示"""
+        total_hours = total_seconds / 3600
+        hours = int(total_hours)
+        minutes = int((total_hours - hours) * 60)
+        
+        if hours == 0:
+            return f"{minutes} mins"
+        elif minutes == 0:
+            hour_text = "hr" if hours == 1 else "hrs"
+            return f"{hours} {hour_text}"
+        else:
+            hour_text = "hr" if hours == 1 else "hrs"
+            return f"{hours} {hour_text} {minutes} mins"
+    
     def generate_clean_chart(self):
         """生成图表"""
         languages = self.get_languages_data()
@@ -97,12 +112,13 @@ class WakaTimeProcessor:
         max_hour = max(hours)
         
         # 自定义文本显示：name 时间 柱形
-        for i, (name, hour) in enumerate(zip(names, hours)):
+        for i, (lang, hour) in enumerate(zip(reversed(languages), hours)):
             # 语言名称左对齐显示在负X轴区域
-            ax.text(-max_hour * 0.95, i, name, 
+            ax.text(-max_hour * 0.95, i, lang['name'], 
                    va='center', ha='left', fontweight='bold')
-            # 时间显示在语言名称右侧
-            ax.text(-max_hour * 0.3, i, f'{hour:.1f}h', 
+            # 时间显示在语言名称右侧，使用新的格式
+            time_text = self.format_time(lang['total_seconds'])
+            ax.text(-max_hour * 0.3, i, time_text, 
                    va='center', ha='left', fontweight='bold')
         
         # 设置X轴范围：左半部分给文本，右半部分给柱状图
