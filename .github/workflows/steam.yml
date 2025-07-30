@@ -28,14 +28,29 @@ jobs:
               env:
                   STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
                   STEAM_ID: ${{ secrets.STEAM_ID }}
-              run: python scripts/generate_steam_chart.py
+              run: |
+                  echo "Starting Steam chart generation..."
+                  if [ -z "$STEAM_API_KEY" ] || [ -z "$STEAM_ID" ]; then
+                    echo "Steam credentials not found, skipping Steam chart generation."
+                    exit 0
+                  else
+                    echo "Using Steam API credentials..."
+                    python scripts/generate_steam_chart.py
+                    echo "Chart generation completed."
+                    echo "Checking generated files:"
+                    ls -la steam_stats*.svg || echo "No SVG files found"
+                  fi
 
             - name: Commit changes
               run: |
                   git config --local user.email "action@github.com"
                   git config --local user.name "GitHub Action"
-                  git add steam_stats.svg steam_stats_dark.svg
-                  git diff --staged --quiet || git commit -m "Update Steam stats"
-                  git push
+                  git add -A
+                  if ! git diff --staged --quiet; then
+                    git commit -m "Update Steam stats"
+                    git push
+                  else
+                    echo "No changes to commit"
+                  fi
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
