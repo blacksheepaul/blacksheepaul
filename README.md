@@ -1,6 +1,6 @@
-Hi there 👋 this is blacksheepaul, a person living on earth, also know a little bit about front and back end programming, service operation and maintenance. I am passionate about finding best practices for general things, so-called services for deploying various software or hardware.
+Hi there 👋 this is blacksheepaul — a human living on Earth, with some experience in both frontend and backend development, as well as service operations and maintenance. I'm passionate about understanding and refining best practices — deploying software and hardware as services is one way I enjoy putting that into action.
 
-In addition to that, I have a very wide range of hobbies and very few dislikes (as opposed to food). In this limited journey of life, we are faced with infinite choices, and I believe that every choice is worth trying.
+Outside of that, I have a wide range of hobbies and very few dislikes (except maybe for certain foods 😅). In this limited journey of life, we're faced with infinite choices — and I believe every choice is worth exploring.
 
 <table width="960px">
 <tr>
