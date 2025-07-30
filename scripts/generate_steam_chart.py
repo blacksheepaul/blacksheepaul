@@ -166,11 +166,11 @@ class SteamProcessor:
         # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
             # 游戏名称左对齐
-            ax.text(0.05, i, game['name'], 
+            ax.text(0.024, i, game['name'], 
                    va='center', ha='left', fontweight='bold')
             # 游戏时间右对齐
             time_text = self.format_time(game[time_key])
-            ax.text(0.95, i, time_text, 
+            ax.text(0.976, i, time_text, 
                    va='center', ha='right', fontweight='bold')
         
         ax.set_xlim(0, 1)
@@ -222,11 +222,11 @@ class SteamProcessor:
         # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
             # 游戏名称左对齐
-            ax.text(0.05, i, game['name'], 
+            ax.text(0.024, i, game['name'], 
                    va='center', ha='left', fontweight='bold', color='white')
             # 游戏时间右对齐
             time_text = self.format_time(game[time_key])
-            ax.text(0.95, i, time_text, 
+            ax.text(0.976, i, time_text, 
                    va='center', ha='right', fontweight='bold', color='#cccccc')
         
         ax.set_xlim(0, 1)
