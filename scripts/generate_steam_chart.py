@@ -160,6 +160,9 @@ class SteamProcessor:
         ax.spines['left'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         
+        # 设置y轴范围以控制行间距
+        ax.set_ylim(-0.5, len(games_reversed) - 0.5)
+        
         # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
             # 游戏名称左对齐
@@ -212,6 +215,9 @@ class SteamProcessor:
         ax.spines['right'].set_visible(False)
         ax.spines['left'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
+        
+        # 设置y轴范围以控制行间距
+        ax.set_ylim(-0.5, len(games_reversed) - 0.5)
         
         # 显示游戏名称和时间（左右对齐布局）
         for i, game in enumerate(games_reversed):
