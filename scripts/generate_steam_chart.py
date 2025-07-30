@@ -25,6 +25,47 @@ class SteamProcessor:
             {'name': 'Elden Ring', 'playtime_2weeks': 14400},       # 4 hours in seconds
         ]
     
+    def get_steam_owned_games(self):
+        """获取Steam拥有的所有游戏"""
+        if self.test_mode:
+            return [
+                {'name': 'The Witcher 3: Wild Hunt', 'playtime_forever': 3600000},  # 1000 hours
+                {'name': 'Counter-Strike: Global Offensive', 'playtime_forever': 2160000},  # 600 hours
+                {'name': 'Dota 2', 'playtime_forever': 1800000},  # 500 hours
+                {'name': 'Cyberpunk 2077', 'playtime_forever': 720000},  # 200 hours
+                {'name': 'Baldur\'s Gate 3', 'playtime_forever': 540000},  # 150 hours
+            ]
+        
+        if not self.steam_api_key or not self.steam_id:
+            return []
+        
+        url = f"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/"
+        params = {
+            'key': self.steam_api_key,
+            'steamid': self.steam_id,
+            'format': 'json',
+            'include_appinfo': True,
+            'include_played_free_games': True
+        }
+        
+        try:
+            response = requests.get(url, params=params)
+            data = response.json()
+            if 'response' in data and 'games' in data['response']:
+                games = data['response']['games']
+                # 获取有游玩时间的游戏，按总游玩时间排序
+                owned_games = [
+                    {'name': game.get('name', 'Unknown Game'), 'playtime_forever': game.get('playtime_forever', 0) * 60}  # 转换为秒
+                    for game in games 
+                    if game.get('playtime_forever', 0) > 0
+                ]
+                owned_games.sort(key=lambda x: x['playtime_forever'], reverse=True)
+                return owned_games[:5]  # 最多5个游戏
+        except Exception as e:
+            print(f"Error fetching Steam owned games: {e}")
+        
+        return []
+
     def get_steam_recent_games(self):
         """获取Steam最近游玩的游戏"""
         if self.test_mode:
@@ -61,24 +102,42 @@ class SteamProcessor:
     def format_time(self, total_seconds):
         """格式化时间显示"""
         total_hours = total_seconds / 3600
-        hours = int(total_hours)
-        minutes = int((total_hours - hours) * 60)
         
-        if hours == 0:
-            return f"{minutes} mins"
-        elif minutes == 0:
-            hour_text = "hr" if hours == 1 else "hrs"
-            return f"{hours} {hour_text}"
+        # 对于超过1000小时的，显示为简化格式
+        if total_hours >= 1000:
+            return f"{total_hours:.0f} hrs"
+        elif total_hours >= 100:
+            return f"{total_hours:.0f} hrs"
+        elif total_hours >= 10:
+            return f"{total_hours:.1f} hrs"
         else:
-            hour_text = "hr" if hours == 1 else "hrs"
-            return f"{hours} {hour_text} {minutes} mins"
+            hours = int(total_hours)
+            minutes = int((total_hours - hours) * 60)
+            
+            if hours == 0:
+                return f"{minutes} mins"
+            elif minutes == 0:
+                hour_text = "hr" if hours == 1 else "hrs"
+                return f"{hours} {hour_text}"
+            else:
+                hour_text = "hr" if hours == 1 else "hrs"
+                return f"{hours} {hour_text} {minutes} mins"
     
     def generate_steam_chart(self):
         """生成Steam游戏时间图表"""
         games = self.get_steam_recent_games()
+        chart_title = 'Weekly Gaming Activity'
+        time_key = 'playtime_2weeks'
+        
+        # 如果没有最近游戏活动，使用总游戏时长
+        if not games:
+            print("No recent gaming activity, showing top games by total playtime")
+            games = self.get_steam_owned_games()
+            chart_title = 'Top Games by Total Playtime'
+            time_key = 'playtime_forever'
         
         if not games:
-            print("No recent gaming activity to display")
+            print("No gaming activity to display")
             return
         
         # 游戏活动颜色（蓝绿色系）
@@ -89,14 +148,14 @@ class SteamProcessor:
         
         # 反转顺序，使时长最长的在顶部
         games_reversed = list(reversed(games))
-        hours = [game['playtime_2weeks'] / 3600 for game in games_reversed]
+        hours = [game[time_key] / 3600 for game in games_reversed]
         y_positions = range(len(games_reversed))
         
         # 绘制柱状图
         bars = ax.barh(y_positions, hours, left=0, color=colors[:len(games_reversed)], height=0.6)
         
         ax.get_xaxis().set_visible(False)
-        ax.set_title('Weekly Gaming Activity', fontsize=16, fontweight='bold', pad=20)
+        ax.set_title(chart_title, fontsize=16, fontweight='bold', pad=20)
         
         # 完全隐藏Y轴
         ax.set_yticks([])
@@ -114,7 +173,7 @@ class SteamProcessor:
         for i, game in enumerate(games_reversed):
             ax.text(-max_hour * 0.95, i, game['name'], 
                    va='center', ha='left', fontweight='bold')
-            time_text = self.format_time(game['playtime_2weeks'])
+            time_text = self.format_time(game[time_key])
             ax.text(-max_hour * 0.3, i, time_text, 
                    va='center', ha='left', fontweight='bold')
         
@@ -128,9 +187,18 @@ class SteamProcessor:
     def generate_steam_dark_chart(self):
         """生成Steam黑暗主题图表"""
         games = self.get_steam_recent_games()
+        chart_title = 'Weekly Gaming Activity'
+        time_key = 'playtime_2weeks'
+        
+        # 如果没有最近游戏活动，使用总游戏时长
+        if not games:
+            print("No recent gaming activity, showing top games by total playtime")
+            games = self.get_steam_owned_games()
+            chart_title = 'Top Games by Total Playtime'
+            time_key = 'playtime_forever'
         
         if not games:
-            print("No recent gaming activity to display")
+            print("No gaming activity to display")
             return
         
         # 黑暗主题颜色
@@ -140,13 +208,13 @@ class SteamProcessor:
         fig.patch.set_facecolor('#1e1e1e')
         
         games_reversed = list(reversed(games))
-        hours = [game['playtime_2weeks'] / 3600 for game in games_reversed]
+        hours = [game[time_key] / 3600 for game in games_reversed]
         y_positions = range(len(games_reversed))
         
         bars = ax.barh(y_positions, hours, left=0, color=colors[:len(games_reversed)], height=0.6)
         
         ax.get_xaxis().set_visible(False)
-        ax.set_title('Weekly Gaming Activity', fontsize=16, fontweight='bold', pad=20, color='white')
+        ax.set_title(chart_title, fontsize=16, fontweight='bold', pad=20, color='white')
         ax.set_facecolor('#1e1e1e')
         
         ax.set_yticks([])
@@ -163,7 +231,7 @@ class SteamProcessor:
         for i, game in enumerate(games_reversed):
             ax.text(-max_hour * 0.95, i, game['name'], 
                    va='center', ha='left', fontweight='bold', color='white')
-            time_text = self.format_time(game['playtime_2weeks'])
+            time_text = self.format_time(game[time_key])
             ax.text(-max_hour * 0.3, i, time_text, 
                    va='center', ha='left', fontweight='bold', color='#cccccc')
         
