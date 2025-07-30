@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="541.44pt" height="177.12pt" viewBox="0 0 541.44 177.12" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="439.596pt" height="591.86185pt" viewBox="0 0 439.596 591.86185" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-07-30T09:08:05.387774</dc:date>
+    <dc:date>2025-07-30T09:29:57.950364</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,66 +21,26 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 177.12 
-L 541.44 177.12 
-L 541.44 0 
+   <path d="M 0 591.86185 
+L 439.596 591.86185 
+L 439.596 0 
 L 0 0 
 z
 " style="fill: #1e1e1e"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 7.2 169.92 
-L 534.24 169.92 
-L 534.24 39.3575 
-L 7.2 39.3575 
+    <path d="M 7.2 579.783725 
+L 432.396 579.783725 
+L 432.396 437.857325 
+L 7.2 437.857325 
 z
 " style="fill: #1e1e1e"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 258.171429 163.985341 
-L 344.873374 163.985341 
-L 344.873374 148.503622 
-L 258.171429 148.503622 
-z
-" clip-path="url(#p9c1a65e805)" style="fill: #4ecdc4"/>
-   </g>
-   <g id="patch_4">
-    <path d="M 258.171429 138.182475 
-L 350.71808 138.182475 
-L 350.71808 122.700756 
-L 258.171429 122.700756 
-z
-" clip-path="url(#p9c1a65e805)" style="fill: #6eddd4"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 258.171429 112.37961 
-L 368.592132 112.37961 
-L 368.592132 96.89789 
-L 258.171429 96.89789 
-z
-" clip-path="url(#p9c1a65e805)" style="fill: #8eeee4"/>
-   </g>
-   <g id="patch_6">
-    <path d="M 258.171429 86.576744 
-L 398.758706 86.576744 
-L 398.758706 71.095025 
-L 258.171429 71.095025 
-z
-" clip-path="url(#p9c1a65e805)" style="fill: #aefff4"/>
-   </g>
-   <g id="patch_7">
-    <path d="M 258.171429 60.773878 
-L 509.142857 60.773878 
-L 509.142857 45.292159 
-L 258.171429 45.292159 
-z
-" clip-path="url(#p9c1a65e805)" style="fill: #ceffff"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="text_1">
     <!-- Grand Theft Auto V Legacy -->
-    <g style="fill: #ffffff" transform="translate(19.748571 158.964794) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(28.4598 582.504037) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-47" d="M 4781 347 
 Q 4331 128 3847 18 
@@ -487,7 +447,7 @@ z
    </g>
    <g id="text_2">
     <!-- 395 hrs -->
-    <g style="fill: #cccccc" transform="translate(132.685714 159.003856) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(368.77995 582.5431) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-33" d="M 2981 2516 
 Q 3453 2394 3698 2092 
@@ -619,7 +579,7 @@ z
    </g>
    <g id="text_3">
     <!-- Counter-Strike 2 -->
-    <g style="fill: #ffffff" transform="translate(19.748571 133.200991) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(28.4598 440.6167) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-43" d="M 4288 256 
 Q 3956 84 3597 -3 
@@ -750,7 +710,7 @@ z
    </g>
    <g id="text_4">
     <!-- 422 hrs -->
-    <g style="fill: #cccccc" transform="translate(132.685714 133.200991) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(368.77995 440.6167) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-34" d="M 2356 3675 
 L 1038 1722 
@@ -783,7 +743,7 @@ z
    </g>
    <g id="text_5">
     <!-- Age of Empires IV: Anniversary Edition -->
-    <g style="fill: #ffffff" transform="translate(19.748571 107.359063) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(28.4598 298.651237) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-45" d="M 588 4666 
 L 3834 4666 
@@ -931,7 +891,7 @@ z
    </g>
    <g id="text_6">
     <!-- 503 hrs -->
-    <g style="fill: #cccccc" transform="translate(132.685714 107.398125) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(368.77995 298.6903) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-30" d="M 2944 2338 
 Q 2944 3213 2780 3570 
@@ -966,7 +926,7 @@ z
    </g>
    <g id="text_7">
     <!-- Conan Exiles -->
-    <g style="fill: #ffffff" transform="translate(19.748571 81.595259) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(28.4598 156.7639) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-78" d="M 1422 1791 
 L 159 3500 
@@ -1007,7 +967,7 @@ z
    </g>
    <g id="text_8">
     <!-- 641 hrs -->
-    <g style="fill: #cccccc" transform="translate(132.685714 81.595259) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(368.77995 156.7639) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-36" d="M 2316 2303 
 Q 2000 2303 1842 2098 
@@ -1065,7 +1025,7 @@ z
    </g>
    <g id="text_9">
     <!-- Oxygen Not Included -->
-    <g style="fill: #ffffff" transform="translate(19.748571 55.753331) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(28.4598 14.798437) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-4f" d="M 2719 3878 
 Q 2169 3878 1866 3472 
@@ -1125,7 +1085,7 @@ z
    </g>
    <g id="text_10">
     <!-- 1144 hrs -->
-    <g style="fill: #cccccc" transform="translate(132.685714 55.792394) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(361.822137 14.8375) scale(0.1 -0.1)">
      <use xlink:href="#DejaVuSans-Bold-31"/>
      <use xlink:href="#DejaVuSans-Bold-31" x="69.580078"/>
      <use xlink:href="#DejaVuSans-Bold-34" x="139.160156"/>
@@ -1138,7 +1098,7 @@ z
    </g>
    <g id="text_11">
     <!-- Top Games by Total Playtime -->
-    <g style="fill: #ffffff" transform="translate(141.3725 19.3575) scale(0.16 -0.16)">
+    <g style="fill: #ffffff" transform="translate(90.4505 417.857325) scale(0.16 -0.16)">
      <defs>
       <path id="DejaVuSans-Bold-62" d="M 2400 722 
 Q 2759 722 2948 984 
@@ -1219,9 +1179,4 @@ z
    </g>
   </g>
  </g>
- <defs>
-  <clipPath id="p9c1a65e805">
-   <rect x="7.2" y="39.3575" width="527.04" height="130.5625"/>
-  </clipPath>
- </defs>
 </svg>
