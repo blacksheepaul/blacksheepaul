@@ -129,6 +129,62 @@ class WakaTimeProcessor:
         plt.close()
         print("Chart saved as wakatime_stats.svg")
 
+    def generate_dark_chart(self):
+        """生成黑暗主题图表"""
+        languages = self.get_languages_data()
+        
+        # 黑暗主题颜色
+        colors = ['#FF6B35', '#4ECDC4', '#A8E6CF', '#FFD93D', '#FF8B94']
+        
+        # 缩短宽度12%：从12到10.56
+        fig, ax = plt.subplots(figsize=(7.62, 2.56))
+        fig.patch.set_facecolor('#1e1e1e')  # 深色背景
+        
+        # 反转顺序，使时长最长的在顶部
+        names = [lang['name'] for lang in reversed(languages)]
+        hours = [lang['total_seconds'] / 3600 for lang in reversed(languages)]
+        
+        # 增加柱形间的间距
+        y_positions = range(len(names))
+        
+        # 柱状图从中间位置开始，占据右半部分
+        bars = ax.barh(y_positions, hours, left=0, color=colors[:len(names)], height=0.6)
+        
+        ax.get_xaxis().set_visible(False)
+        ax.set_title('Weekly Coding Activity', fontsize=16, fontweight='bold', pad=20, color='white')
+        ax.set_facecolor('#1e1e1e')  # 图表区域背景
+        
+        # 完全隐藏Y轴刻度和标签
+        ax.set_yticks([])
+        ax.set_yticklabels([])
+        ax.tick_params(left=False)
+        
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['left'].set_visible(False)
+        ax.spines['bottom'].set_visible(False)
+        
+        # 计算最大小时数，用于设置比例
+        max_hour = max(hours)
+        
+        # 自定义文本显示：name 时间 柱形
+        for i, (lang, hour) in enumerate(zip(reversed(languages), hours)):
+            # 语言名称左对齐显示在负X轴区域
+            ax.text(-max_hour * 0.95, i, lang['name'], 
+                   va='center', ha='left', fontweight='bold', color='white')
+            # 时间显示在语言名称右侧，使用新的格式
+            time_text = self.format_time(lang['total_seconds'])
+            ax.text(-max_hour * 0.3, i, time_text, 
+                   va='center', ha='left', fontweight='bold', color='#cccccc')
+        
+        # 设置X轴范围：左半部分给文本，右半部分给柱状图
+        ax.set_xlim(-max_hour, max_hour * 1.1)
+        
+        plt.tight_layout()
+        plt.savefig('wakatime_stats_dark.svg', format='svg', bbox_inches='tight')
+        plt.close()
+        print("Dark theme chart saved as wakatime_stats_dark.svg")
+
 def main():
     parser = argparse.ArgumentParser(description='Generate WakaTime coding activity chart')
     parser.add_argument('--test', action='store_true', help='Run in test mode with mock data')
@@ -144,7 +200,9 @@ def main():
             return
         processor = WakaTimeProcessor(api_key)
     
+    # 生成两个主题的图表
     processor.generate_clean_chart()
+    processor.generate_dark_chart()
 
 if __name__ == "__main__":
     main()
