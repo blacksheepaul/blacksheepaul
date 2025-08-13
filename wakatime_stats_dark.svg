@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-08-12T00:20:51.920892</dc:date>
+    <dc:date>2025-08-13T00:21:02.116738</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -39,19 +39,19 @@ z
    </g>
    <g id="patch_3">
     <path d="M 258.171429 163.985341 
-L 267.211488 163.985341 
-L 267.211488 136.594607 
+L 267.601791 163.985341 
+L 267.601791 136.594607 
 L 258.171429 136.594607 
 z
-" clip-path="url(#p800c5eb495)" style="fill: #ff6b35"/>
+" clip-path="url(#pf6d96a448a)" style="fill: #ff6b35"/>
    </g>
    <g id="patch_4">
     <path d="M 258.171429 118.334117 
-L 271.547132 118.334117 
-L 271.547132 90.943383 
+L 272.012802 118.334117 
+L 272.012802 90.943383 
 L 258.171429 90.943383 
 z
-" clip-path="url(#p800c5eb495)" style="fill: #4ecdc4"/>
+" clip-path="url(#pf6d96a448a)" style="fill: #4ecdc4"/>
    </g>
    <g id="patch_5">
     <path d="M 258.171429 72.682893 
@@ -59,7 +59,7 @@ L 509.142857 72.682893
 L 509.142857 45.292159 
 L 258.171429 45.292159 
 z
-" clip-path="url(#p800c5eb495)" style="fill: #a8e6cf"/>
+" clip-path="url(#pf6d96a448a)" style="fill: #a8e6cf"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="text_1">
@@ -513,7 +513,7 @@ z
     </g>
    </g>
    <g id="text_6">
-    <!-- 14 hrs 58 mins -->
+    <!-- 14 hrs 28 mins -->
     <g style="fill: #cccccc" transform="translate(132.685714 61.746901) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-31" d="M 750 831 
@@ -550,31 +550,6 @@ Q 1909 3294 2193 3439
 Q 2478 3584 2822 3584 
 Q 3428 3584 3742 3212 
 Q 4056 2841 4056 2131 
-z
-" transform="scale(0.015625)"/>
-      <path id="DejaVuSans-Bold-35" d="M 678 4666 
-L 3669 4666 
-L 3669 3781 
-L 1638 3781 
-L 1638 3059 
-Q 1775 3097 1914 3117 
-Q 2053 3138 2203 3138 
-Q 3056 3138 3531 2711 
-Q 4006 2284 4006 1522 
-Q 4006 766 3489 337 
-Q 2972 -91 2053 -91 
-Q 1656 -91 1267 -14 
-Q 878 63 494 219 
-L 494 1166 
-Q 875 947 1217 837 
-Q 1559 728 1863 728 
-Q 2300 728 2551 942 
-Q 2803 1156 2803 1522 
-Q 2803 1891 2551 2103 
-Q 2300 2316 1863 2316 
-Q 1603 2316 1309 2248 
-Q 1016 2181 678 2041 
-L 678 4666 
 z
 " transform="scale(0.015625)"/>
       <path id="DejaVuSans-Bold-38" d="M 2228 2088 
@@ -624,7 +599,7 @@ z
      <use xlink:href="#DejaVuSans-Bold-72" x="245.166016"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="294.482422"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="354.003906"/>
-     <use xlink:href="#DejaVuSans-Bold-35" x="388.818359"/>
+     <use xlink:href="#DejaVuSans-Bold-32" x="388.818359"/>
      <use xlink:href="#DejaVuSans-Bold-38" x="458.398438"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="527.978516"/>
      <use xlink:href="#DejaVuSans-Bold-6d" x="562.792969"/>
@@ -837,7 +812,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p800c5eb495">
+  <clipPath id="pf6d96a448a">
    <rect x="7.2" y="39.3575" width="527.04" height="130.5625"/>
   </clipPath>
  </defs>
