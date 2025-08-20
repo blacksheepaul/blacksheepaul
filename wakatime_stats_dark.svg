@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-08-19T00:20:35.463601</dc:date>
+    <dc:date>2025-08-20T00:19:46.288346</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -39,27 +39,27 @@ z
    </g>
    <g id="patch_3">
     <path d="M 258.171429 163.985341 
-L 266.208961 163.985341 
-L 266.208961 144.203144 
+L 267.677725 163.985341 
+L 267.677725 144.203144 
 L 258.171429 144.203144 
 z
-" clip-path="url(#p3deb3f6fb2)" style="fill: #ff6b35"/>
+" clip-path="url(#p188d40af73)" style="fill: #ff6b35"/>
    </g>
    <g id="patch_4">
     <path d="M 258.171429 131.015013 
-L 268.424067 131.015013 
-L 268.424067 111.232816 
+L 270.297615 131.015013 
+L 270.297615 111.232816 
 L 258.171429 111.232816 
 z
-" clip-path="url(#p3deb3f6fb2)" style="fill: #4ecdc4"/>
+" clip-path="url(#p188d40af73)" style="fill: #4ecdc4"/>
    </g>
    <g id="patch_5">
     <path d="M 258.171429 98.044684 
-L 281.416596 98.044684 
-L 281.416596 78.262487 
+L 285.664375 98.044684 
+L 285.664375 78.262487 
 L 258.171429 78.262487 
 z
-" clip-path="url(#p3deb3f6fb2)" style="fill: #a8e6cf"/>
+" clip-path="url(#p188d40af73)" style="fill: #a8e6cf"/>
    </g>
    <g id="patch_6">
     <path d="M 258.171429 65.074356 
@@ -67,7 +67,7 @@ L 509.142857 65.074356
 L 509.142857 45.292159 
 L 258.171429 45.292159 
 z
-" clip-path="url(#p3deb3f6fb2)" style="fill: #ffd93d"/>
+" clip-path="url(#p188d40af73)" style="fill: #ffd93d"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="text_1">
@@ -690,53 +690,22 @@ z
     </g>
    </g>
    <g id="text_8">
-    <!-- 16 hrs 1 mins -->
+    <!-- 13 hrs 32 mins -->
     <g style="fill: #cccccc" transform="translate(132.685714 57.942633) scale(0.1 -0.1)">
-     <defs>
-      <path id="DejaVuSans-Bold-36" d="M 2316 2303 
-Q 2000 2303 1842 2098 
-Q 1684 1894 1684 1484 
-Q 1684 1075 1842 870 
-Q 2000 666 2316 666 
-Q 2634 666 2792 870 
-Q 2950 1075 2950 1484 
-Q 2950 1894 2792 2098 
-Q 2634 2303 2316 2303 
-z
-M 3803 4544 
-L 3803 3681 
-Q 3506 3822 3243 3889 
-Q 2981 3956 2731 3956 
-Q 2194 3956 1894 3657 
-Q 1594 3359 1544 2772 
-Q 1750 2925 1990 3001 
-Q 2231 3078 2516 3078 
-Q 3231 3078 3670 2659 
-Q 4109 2241 4109 1563 
-Q 4109 813 3618 361 
-Q 3128 -91 2303 -91 
-Q 1394 -91 895 523 
-Q 397 1138 397 2266 
-Q 397 3422 980 4083 
-Q 1563 4744 2578 4744 
-Q 2900 4744 3203 4694 
-Q 3506 4644 3803 4544 
-z
-" transform="scale(0.015625)"/>
-     </defs>
      <use xlink:href="#DejaVuSans-Bold-31"/>
-     <use xlink:href="#DejaVuSans-Bold-36" x="69.580078"/>
+     <use xlink:href="#DejaVuSans-Bold-33" x="69.580078"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="139.160156"/>
      <use xlink:href="#DejaVuSans-Bold-68" x="173.974609"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="245.166016"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="294.482422"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="354.003906"/>
-     <use xlink:href="#DejaVuSans-Bold-31" x="388.818359"/>
-     <use xlink:href="#DejaVuSans-Bold-20" x="458.398438"/>
-     <use xlink:href="#DejaVuSans-Bold-6d" x="493.212891"/>
-     <use xlink:href="#DejaVuSans-Bold-69" x="597.412109"/>
-     <use xlink:href="#DejaVuSans-Bold-6e" x="631.689453"/>
-     <use xlink:href="#DejaVuSans-Bold-73" x="702.880859"/>
+     <use xlink:href="#DejaVuSans-Bold-33" x="388.818359"/>
+     <use xlink:href="#DejaVuSans-Bold-32" x="458.398438"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="527.978516"/>
+     <use xlink:href="#DejaVuSans-Bold-6d" x="562.792969"/>
+     <use xlink:href="#DejaVuSans-Bold-69" x="666.992188"/>
+     <use xlink:href="#DejaVuSans-Bold-6e" x="701.269531"/>
+     <use xlink:href="#DejaVuSans-Bold-73" x="772.460938"/>
     </g>
    </g>
    <g id="text_9">
@@ -934,7 +903,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p3deb3f6fb2">
+  <clipPath id="p188d40af73">
    <rect x="7.2" y="39.3575" width="527.04" height="130.5625"/>
   </clipPath>
  </defs>
