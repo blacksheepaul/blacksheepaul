@@ -126,7 +126,7 @@ class SteamProcessor:
     def generate_steam_chart(self):
         """生成Steam游戏时间图表"""
         games = self.get_steam_recent_games()
-        chart_title = 'Weekly Gaming Activity'
+        chart_title = 'Last Two Weeks’ Gaming Activity'
         time_key = 'playtime_2weeks'
         
         # 如果没有最近游戏活动，使用总游戏时长
