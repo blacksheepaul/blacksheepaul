@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-09-18T02:26:22.931134</dc:date>
+    <dc:date>2025-09-19T02:27:52.937920</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -344,8 +344,8 @@ z
     </g>
    </g>
    <g id="text_2">
-    <!-- 101 hrs -->
-    <g transform="translate(479.23479 107.398125) scale(0.1 -0.1)">
+    <!-- 100.0 hrs -->
+    <g transform="translate(468.47854 107.398125) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-31" d="M 750 831 
 L 1813 831 
@@ -382,6 +382,13 @@ Q 3147 4750 3647 4120
 Q 4147 3491 4147 2328 
 z
 " transform="scale(0.015625)"/>
+      <path id="DejaVuSans-Bold-2e" d="M 653 1209 
+L 1778 1209 
+L 1778 0 
+L 653 0 
+L 653 1209 
+z
+" transform="scale(0.015625)"/>
       <path id="DejaVuSans-Bold-72" d="M 3138 2547 
 Q 2991 2616 2845 2648 
 Q 2700 2681 2553 2681 
@@ -402,11 +409,13 @@ z
      </defs>
      <use xlink:href="#DejaVuSans-Bold-31"/>
      <use xlink:href="#DejaVuSans-Bold-30" x="69.580078"/>
-     <use xlink:href="#DejaVuSans-Bold-31" x="139.160156"/>
-     <use xlink:href="#DejaVuSans-Bold-20" x="208.740234"/>
-     <use xlink:href="#DejaVuSans-Bold-68" x="243.554688"/>
-     <use xlink:href="#DejaVuSans-Bold-72" x="314.746094"/>
-     <use xlink:href="#DejaVuSans-Bold-73" x="364.0625"/>
+     <use xlink:href="#DejaVuSans-Bold-30" x="139.160156"/>
+     <use xlink:href="#DejaVuSans-Bold-2e" x="208.740234"/>
+     <use xlink:href="#DejaVuSans-Bold-30" x="246.728516"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="316.308594"/>
+     <use xlink:href="#DejaVuSans-Bold-68" x="351.123047"/>
+     <use xlink:href="#DejaVuSans-Bold-72" x="422.314453"/>
+     <use xlink:href="#DejaVuSans-Bold-73" x="471.630859"/>
     </g>
    </g>
    <g id="text_3">
