@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-03-09T00:27:45.364173</dc:date>
+    <dc:date>2026-03-10T00:24:28.163535</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -39,27 +39,27 @@ z
    </g>
    <g id="patch_3">
     <path d="M 258.171429 163.985341 
-L 277.011101 163.985341 
-L 277.011101 144.203144 
+L 275.163418 163.985341 
+L 275.163418 144.203144 
 L 258.171429 144.203144 
 z
-" clip-path="url(#pe159e7116f)" style="fill: #dd5500"/>
+" clip-path="url(#p245aa6a415)" style="fill: #dd5500"/>
    </g>
    <g id="patch_4">
     <path d="M 258.171429 131.015013 
-L 306.157505 131.015013 
-L 306.157505 111.232816 
+L 301.445995 131.015013 
+L 301.445995 111.232816 
 L 258.171429 111.232816 
 z
-" clip-path="url(#pe159e7116f)" style="fill: #00dd55"/>
+" clip-path="url(#p245aa6a415)" style="fill: #00dd55"/>
    </g>
    <g id="patch_5">
     <path d="M 258.171429 98.044684 
-L 326.434239 98.044684 
-L 326.434239 78.262487 
+L 317.423156 98.044684 
+L 317.423156 78.262487 
 L 258.171429 78.262487 
 z
-" clip-path="url(#pe159e7116f)" style="fill: #5500dd"/>
+" clip-path="url(#p245aa6a415)" style="fill: #5500dd"/>
    </g>
    <g id="patch_6">
     <path d="M 258.171429 65.074356 
@@ -67,7 +67,7 @@ L 509.142857 65.074356
 L 509.142857 45.292159 
 L 258.171429 45.292159 
 z
-" clip-path="url(#pe159e7116f)" style="fill: #dddd00"/>
+" clip-path="url(#p245aa6a415)" style="fill: #dddd00"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="text_1">
@@ -639,7 +639,7 @@ z
     </g>
    </g>
    <g id="text_6">
-    <!-- 2 hrs 18 mins -->
+    <!-- 2 hrs 13 mins -->
     <g transform="translate(132.685714 90.912961) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-32" d="M 1844 884 
@@ -672,7 +672,7 @@ z
      <use xlink:href="#DejaVuSans-Bold-73" x="224.902344"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="284.423828"/>
      <use xlink:href="#DejaVuSans-Bold-31" x="319.238281"/>
-     <use xlink:href="#DejaVuSans-Bold-38" x="388.818359"/>
+     <use xlink:href="#DejaVuSans-Bold-33" x="388.818359"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="458.398438"/>
      <use xlink:href="#DejaVuSans-Bold-6d" x="493.212891"/>
      <use xlink:href="#DejaVuSans-Bold-69" x="597.412109"/>
@@ -715,7 +715,7 @@ z
     </g>
    </g>
    <g id="text_8">
-    <!-- 8 hrs 29 mins -->
+    <!-- 9 hrs 24 mins -->
     <g transform="translate(132.685714 57.942633) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-39" d="M 641 103 
@@ -748,15 +748,34 @@ Q 1491 2759 1650 2554
 Q 1809 2350 2125 2350 
 z
 " transform="scale(0.015625)"/>
+      <path id="DejaVuSans-Bold-34" d="M 2356 3675 
+L 1038 1722 
+L 2356 1722 
+L 2356 3675 
+z
+M 2156 4666 
+L 3494 4666 
+L 3494 1722 
+L 4159 1722 
+L 4159 850 
+L 3494 850 
+L 3494 0 
+L 2356 0 
+L 2356 850 
+L 288 850 
+L 288 1881 
+L 2156 4666 
+z
+" transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#DejaVuSans-Bold-38"/>
+     <use xlink:href="#DejaVuSans-Bold-39"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="69.580078"/>
      <use xlink:href="#DejaVuSans-Bold-68" x="104.394531"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="175.585938"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="224.902344"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="284.423828"/>
      <use xlink:href="#DejaVuSans-Bold-32" x="319.238281"/>
-     <use xlink:href="#DejaVuSans-Bold-39" x="388.818359"/>
+     <use xlink:href="#DejaVuSans-Bold-34" x="388.818359"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="458.398438"/>
      <use xlink:href="#DejaVuSans-Bold-6d" x="493.212891"/>
      <use xlink:href="#DejaVuSans-Bold-69" x="597.412109"/>
@@ -893,7 +912,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pe159e7116f">
+  <clipPath id="p245aa6a415">
    <rect x="7.2" y="39.3575" width="527.04" height="130.5625"/>
   </clipPath>
  </defs>
