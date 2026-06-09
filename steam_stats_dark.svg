@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-08T03:02:50.234004</dc:date>
+    <dc:date>2026-06-09T03:01:32.792885</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ z
    <g id="matplotlib.axis_1"/>
    <g id="text_1">
     <!-- Oxygen Not Included -->
-    <g style="fill: #ffffff" transform="translate(19.84896 156.32) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(19.84896 159.584063) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-4f" d="M 2719 3878 
 Q 2169 3878 1866 3472 
@@ -340,7 +340,7 @@ z
    </g>
    <g id="text_2">
     <!-- 13 mins -->
-    <g style="fill: #cccccc" transform="translate(477.275415 156.359063) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(477.275415 159.623125) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-31" d="M 750 831 
 L 1813 831 
@@ -476,7 +476,7 @@ z
    </g>
    <g id="text_3">
     <!-- No Man's Sky -->
-    <g style="fill: #ffffff" transform="translate(19.84896 123.679375) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(19.84896 133.471563) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-4d" d="M 588 4666 
 L 2119 4666 
@@ -596,7 +596,7 @@ z
    </g>
    <g id="text_4">
     <!-- 18 mins -->
-    <g style="fill: #cccccc" transform="translate(477.275415 123.718438) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(477.275415 133.510625) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-38" d="M 2228 2088 
 Q 1891 2088 1709 1903 
@@ -649,7 +649,7 @@ z
    </g>
    <g id="text_5">
     <!-- Escape from Duckov -->
-    <g style="fill: #ffffff" transform="translate(19.84896 91.077813) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(19.84896 107.398125) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-45" d="M 588 4666 
 L 3834 4666 
@@ -786,7 +786,7 @@ z
    </g>
    <g id="text_6">
     <!-- 20 mins -->
-    <g style="fill: #cccccc" transform="translate(477.275415 91.077813) scale(0.1 -0.1)">
+    <g style="fill: #cccccc" transform="translate(477.275415 107.398125) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-32" d="M 1844 884 
 L 3897 884 
@@ -842,8 +842,112 @@ z
     </g>
    </g>
    <g id="text_7">
+    <!-- Company of Heroes 3 -->
+    <g style="fill: #ffffff" transform="translate(19.84896 81.246563) scale(0.1 -0.1)">
+     <defs>
+      <path id="DejaVuSans-Bold-43" d="M 4288 256 
+Q 3956 84 3597 -3 
+Q 3238 -91 2847 -91 
+Q 1681 -91 1000 561 
+Q 319 1213 319 2328 
+Q 319 3447 1000 4098 
+Q 1681 4750 2847 4750 
+Q 3238 4750 3597 4662 
+Q 3956 4575 4288 4403 
+L 4288 3438 
+Q 3953 3666 3628 3772 
+Q 3303 3878 2944 3878 
+Q 2300 3878 1931 3465 
+Q 1563 3053 1563 2328 
+Q 1563 1606 1931 1193 
+Q 2300 781 2944 781 
+Q 3303 781 3628 887 
+Q 3953 994 4288 1222 
+L 4288 256 
+z
+" transform="scale(0.015625)"/>
+      <path id="DejaVuSans-Bold-48" d="M 588 4666 
+L 1791 4666 
+L 1791 2888 
+L 3566 2888 
+L 3566 4666 
+L 4769 4666 
+L 4769 0 
+L 3566 0 
+L 3566 1978 
+L 1791 1978 
+L 1791 0 
+L 588 0 
+L 588 4666 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-Bold-43"/>
+     <use xlink:href="#DejaVuSans-Bold-6f" x="73.388672"/>
+     <use xlink:href="#DejaVuSans-Bold-6d" x="142.089844"/>
+     <use xlink:href="#DejaVuSans-Bold-70" x="246.289062"/>
+     <use xlink:href="#DejaVuSans-Bold-61" x="317.871094"/>
+     <use xlink:href="#DejaVuSans-Bold-6e" x="385.351562"/>
+     <use xlink:href="#DejaVuSans-Bold-79" x="456.542969"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="521.728516"/>
+     <use xlink:href="#DejaVuSans-Bold-6f" x="556.542969"/>
+     <use xlink:href="#DejaVuSans-Bold-66" x="625.244141"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="668.75"/>
+     <use xlink:href="#DejaVuSans-Bold-48" x="703.564453"/>
+     <use xlink:href="#DejaVuSans-Bold-65" x="787.255859"/>
+     <use xlink:href="#DejaVuSans-Bold-72" x="855.078125"/>
+     <use xlink:href="#DejaVuSans-Bold-6f" x="904.394531"/>
+     <use xlink:href="#DejaVuSans-Bold-65" x="973.095703"/>
+     <use xlink:href="#DejaVuSans-Bold-73" x="1040.917969"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="1100.439453"/>
+     <use xlink:href="#DejaVuSans-Bold-33" x="1135.253906"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- 3 hrs 28 mins -->
+    <g style="fill: #cccccc" transform="translate(445.35354 81.285625) scale(0.1 -0.1)">
+     <defs>
+      <path id="DejaVuSans-Bold-68" d="M 4056 2131 
+L 4056 0 
+L 2931 0 
+L 2931 347 
+L 2931 1625 
+Q 2931 2084 2911 2256 
+Q 2891 2428 2841 2509 
+Q 2775 2619 2662 2680 
+Q 2550 2741 2406 2741 
+Q 2056 2741 1856 2470 
+Q 1656 2200 1656 1722 
+L 1656 0 
+L 538 0 
+L 538 4863 
+L 1656 4863 
+L 1656 2988 
+Q 1909 3294 2193 3439 
+Q 2478 3584 2822 3584 
+Q 3428 3584 3742 3212 
+Q 4056 2841 4056 2131 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-Bold-33"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="69.580078"/>
+     <use xlink:href="#DejaVuSans-Bold-68" x="104.394531"/>
+     <use xlink:href="#DejaVuSans-Bold-72" x="175.585938"/>
+     <use xlink:href="#DejaVuSans-Bold-73" x="224.902344"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="284.423828"/>
+     <use xlink:href="#DejaVuSans-Bold-32" x="319.238281"/>
+     <use xlink:href="#DejaVuSans-Bold-38" x="388.818359"/>
+     <use xlink:href="#DejaVuSans-Bold-20" x="458.398438"/>
+     <use xlink:href="#DejaVuSans-Bold-6d" x="493.212891"/>
+     <use xlink:href="#DejaVuSans-Bold-69" x="597.412109"/>
+     <use xlink:href="#DejaVuSans-Bold-6e" x="631.689453"/>
+     <use xlink:href="#DejaVuSans-Bold-73" x="702.880859"/>
+    </g>
+   </g>
+   <g id="text_9">
     <!-- Stardew Valley -->
-    <g style="fill: #ffffff" transform="translate(19.84896 58.398125) scale(0.1 -0.1)">
+    <g style="fill: #ffffff" transform="translate(19.84896 55.134062) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-77" d="M 225 3500 
 L 1313 3500 
@@ -888,9 +992,9 @@ z
      <use xlink:href="#DejaVuSans-Bold-79" x="778.972656"/>
     </g>
    </g>
-   <g id="text_8">
-    <!-- 15.0 hrs -->
-    <g style="fill: #cccccc" transform="translate(475.436352 58.437188) scale(0.1 -0.1)">
+   <g id="text_10">
+    <!-- 15.3 hrs -->
+    <g style="fill: #cccccc" transform="translate(475.436352 55.173125) scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-Bold-35" d="M 678 4666 
 L 3669 4666 
@@ -924,40 +1028,18 @@ L 653 0
 L 653 1209 
 z
 " transform="scale(0.015625)"/>
-      <path id="DejaVuSans-Bold-68" d="M 4056 2131 
-L 4056 0 
-L 2931 0 
-L 2931 347 
-L 2931 1625 
-Q 2931 2084 2911 2256 
-Q 2891 2428 2841 2509 
-Q 2775 2619 2662 2680 
-Q 2550 2741 2406 2741 
-Q 2056 2741 1856 2470 
-Q 1656 2200 1656 1722 
-L 1656 0 
-L 538 0 
-L 538 4863 
-L 1656 4863 
-L 1656 2988 
-Q 1909 3294 2193 3439 
-Q 2478 3584 2822 3584 
-Q 3428 3584 3742 3212 
-Q 4056 2841 4056 2131 
-z
-" transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#DejaVuSans-Bold-31"/>
      <use xlink:href="#DejaVuSans-Bold-35" x="69.580078"/>
      <use xlink:href="#DejaVuSans-Bold-2e" x="139.160156"/>
-     <use xlink:href="#DejaVuSans-Bold-30" x="177.148438"/>
+     <use xlink:href="#DejaVuSans-Bold-33" x="177.148438"/>
      <use xlink:href="#DejaVuSans-Bold-20" x="246.728516"/>
      <use xlink:href="#DejaVuSans-Bold-68" x="281.542969"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="352.734375"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="402.050781"/>
     </g>
    </g>
-   <g id="text_9">
+   <g id="text_11">
     <!-- Weekly Gaming Activity -->
     <g style="fill: #ffffff" transform="translate(163.525 19.3575) scale(0.16 -0.16)">
      <defs>
